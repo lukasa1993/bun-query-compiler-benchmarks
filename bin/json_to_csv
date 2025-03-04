@@ -1,0 +1,3 @@
+#!/bin/sh
+jq -r '.benchmarks[] | [.name, .group, .time, .warmup, .baseline, .async, .stats.n, .stats.min, .stats.max, .stats.p75, .stats.p99, .stats.avg, .stats.p995, .stats.p999] | @csv'
+

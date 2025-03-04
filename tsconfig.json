@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "paths": {
+      "prisma-common": ["./benches/prisma-common"],
+      "prisma-native-qe": ["./benches/prisma-native-qe"],
+      "prisma-pg-napi-qe": ["./benches/prisma-pg-napi-qe"],
+      "prisma-pg-wasm-qe": ["./benches/prisma-pg-wasm-qe"],
+      "common": ["./benches/common"]
+    }
+  }
+}

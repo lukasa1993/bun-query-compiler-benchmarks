@@ -1,0 +1,7 @@
+node_modules
+benches/**/client
+.envrc
+*.sql
+venv
+*.png
+results.json

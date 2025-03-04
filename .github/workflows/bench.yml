@@ -1,0 +1,42 @@
+name: Bench
+
+# Run on push only for main, if not it will trigger push & pull_request on PRs at the same time
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      # Any update here needs to be done for
+      # - `pull_request` see below
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      # Any update here needs to be done for
+      # - `push` see before
+      - '*.md'
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Run all benchmarks
+    runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:8432/bench?schema=imdb_bench&sslmode=disable
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2.4.0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - run: docker compose up -d
+      - run: pnpm run seed
+      - run: pnpm start

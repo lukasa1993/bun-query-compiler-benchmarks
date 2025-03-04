@@ -1,0 +1,21 @@
+name: qc-bench
+
+services:
+  postgres:
+    image: postgres:17
+    shm_size: 1g
+    restart: unless-stopped
+    # Uncomment the following line to enable query logging
+    # Then restart the container.
+    # command: ['postgres', '-c', 'log_statement=all']
+    environment:
+      - POSTGRES_DB=bench
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '8432:5432'
+    healthcheck:
+      test: ['CMD', 'pg_isready']
+      interval: 5s
+      timeout: 2s
+      retries: 20

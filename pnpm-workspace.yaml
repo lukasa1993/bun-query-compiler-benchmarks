@@ -1,0 +1,7 @@
+packages:
+  - benches/*
+
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - prisma
