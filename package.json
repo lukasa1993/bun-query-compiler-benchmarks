@@ -1,28 +1,28 @@
 {
-  "type": "module",
-  "scripts": {
-    "start": "pnpm -r build && tsx main.ts --skip",
-    "seed": "pnpm -r build && pnpm -r seed"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": true
-  },
-  "prisma": {
-    "schema": "./benches/prisma-orm/prisma/schema.prisma"
-  },
-  "dependencies": {
-    "arg": "^5.0.2",
-    "common": "workspace:*",
-    "mitata": "^0.1.14",
-    "prisma-common": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^18.19.76",
-    "prettier": "^2.8.8",
-    "tsx": "^3.14.0",
-    "typescript": "^5.7.3"
-  },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
+	"type": "module",
+	"scripts": {
+		"start": "pnpm -r build && bun main.ts --skip",
+		"seed": "pnpm -r build && pnpm -r seed"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"semi": true
+	},
+	"prisma": {
+		"schema": "./benches/prisma-orm/prisma/schema.prisma"
+	},
+	"dependencies": {
+		"arg": "^5.0.2",
+		"common": "workspace:*",
+		"mitata": "^0.1.14",
+		"prisma-common": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^18.19.76",
+		"prettier": "^2.8.8",
+		"tsx": "^3.14.0",
+		"typescript": "^5.7.3"
+	},
+	"packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }

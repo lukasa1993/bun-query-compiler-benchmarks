@@ -1,12 +1,13 @@
 {
-	"name": "prisma-pg-wasm-qe",
+	"name": "prisma-pg-qc",
 	"type": "module",
 	"scripts": {
-		"build": "PRISMA_CLIENT_FORCE_WASM=true pnpm prisma generate"
+		"build": "PRISMA_UNSTABLE_CLIENT_ENGINE_TYPE=true pnpm prisma generate"
 	},
 	"dependencies": {
 		"@prisma/adapter-pg": "6.10.1",
 		"@prisma/client": "6.10.1",
+		"@prisma/driver-adapter-utils": "6.10.1",
 		"common": "workspace:*",
 		"pg": "^8.13.3",
 		"prisma-common": "workspace:*"

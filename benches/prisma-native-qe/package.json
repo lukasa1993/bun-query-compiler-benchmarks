@@ -1,28 +1,28 @@
 {
-  "name": "prisma-native-qe",
-  "type": "module",
-  "scripts": {
-    "build": "pnpm run get-schema && prisma generate",
-    "get-schema": "mkdir -p ./prisma && cp ../prisma-common/prisma/schema.prisma ./prisma/schema.prisma"
-  },
-  "dependencies": {
-    "@prisma/client": "6.4.1",
-    "common": "workspace:*",
-    "prisma-common": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^18.19.76",
-    "prettier": "^2.8.8",
-    "prisma": "6.4.1",
-    "tsx": "^3.14.0",
-    "typescript": "^5.7.3"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": true
-  },
-  "prisma": {
-    "schema": "./prisma/schema.prisma"
-  }
+	"name": "prisma-native-qe",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm run get-schema && prisma generate",
+		"get-schema": "mkdir -p ./prisma && cp ../prisma-common/prisma/schema.prisma ./prisma/schema.prisma"
+	},
+	"dependencies": {
+		"@prisma/client": "6.10.1",
+		"common": "workspace:*",
+		"prisma-common": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^18.19.76",
+		"prettier": "^2.8.8",
+		"prisma": "6.10.1",
+		"tsx": "^3.14.0",
+		"typescript": "^5.7.3"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"semi": true
+	},
+	"prisma": {
+		"schema": "./prisma/schema.prisma"
+	}
 }

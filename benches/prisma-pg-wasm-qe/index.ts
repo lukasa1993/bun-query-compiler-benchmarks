@@ -1,6 +1,6 @@
-import { benches as originalBenches } from 'prisma-common/benches';
-import { Bench } from 'common';
-import { PrismaClient } from './client';
+import type { Bench } from "common";
+import { benches as originalBenches } from "prisma-common/benches";
+import type { PrismaClient } from "./client";
 
-export * from './setup';
+export * from "./setup";
 export const benches = originalBenches as Bench<PrismaClient>;

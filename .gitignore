@@ -5,3 +5,5 @@ benches/**/client
 venv
 *.png
 results.json
+**.DS_Store**
+**.history**

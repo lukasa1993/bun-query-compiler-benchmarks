@@ -1,21 +1,21 @@
 {
-  "name": "common",
-  "type": "module",
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": true
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "lodash.uniqby": "^4.7.0",
-    "mitata": "^0.1.14"
-  },
-  "devDependencies": {
-    "@types/lodash.uniqby": "^4.7.9",
-    "@types/node": "^18.19.76",
-    "prettier": "^2.8.8",
-    "prisma": "6.4.1",
-    "typescript": "^5.7.3"
-  }
+	"name": "common",
+	"type": "module",
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"semi": true
+	},
+	"dependencies": {
+		"dotenv": "^16.4.7",
+		"lodash.uniqby": "^4.7.0",
+		"mitata": "^0.1.14"
+	},
+	"devDependencies": {
+		"@types/lodash.uniqby": "^4.7.9",
+		"@types/node": "^18.19.76",
+		"prettier": "^2.8.8",
+		"prisma": "6.10.1",
+		"typescript": "^5.7.3"
+	}
 }

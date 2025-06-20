@@ -1,10 +1,11 @@
-import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "./client";
+import { PrismaBun } from "./adapters/db";
+import { PrismaClient } from "./client/client";
 
 export async function setup() {
 	const connectionString = process.env.DATABASE_URL ?? "";
 
-	const adapter = new PrismaPg({ connectionString });
+	const adapter = new PrismaBun({ connectionString });
+
 	const prisma = new PrismaClient({ adapter });
 
 	await prisma.$connect();
